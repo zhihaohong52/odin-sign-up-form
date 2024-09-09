@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+@font-face {
+    font-family: Norse;
+    src: url('./font/Norse-Bold.otf');
+}
+
+@font-face {
+    font-family: Norse;
+    font-weight: bold;
+    src: url('./font/Norse-Bold.otf');
+}
+
+:root{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    background-color: #F9FAFB;
+    color: black;
+    --signup-color: #596D48;
+    --input-border-color: #E5E7EB;
+    --picture-width: 40vw;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+
+.container{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container,
+.logo{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.picture{
+    background-image: url('https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: var(--picture-width);
+}
+
+.logo{
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: relative;
+    top: 20vh;
+    gap: 1vw;
+    padding: 1vw;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+}
+
+.hero-logo{
+    height: 10vh;
+}
+
+.title{
+    font-family: "Norse", sans-serif;
+    font-weight: bold;
+    font-size: 10vh;
+    margin-top: 2vh;
+}
+
+.main{
+    width: calc(100vw - var(--picture-width));
+    height: 90vh;
+    background-color: white;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 1vh 0;
+}
+
+.left{
+    padding-left: 3vw;
+}
+
+.text{
+    font-weight: 500;
+    width: 90%;
+    font-size: 1.2rem;
+}
+
+.text-2{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+/* FORM */
+
+.form{
+    background-color: white;
+    box-shadow: 0 5px 10px 4px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1vh 3vw;
+    padding: 1vh 3vw;
+}
+
+.input{
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    opacity: 50%;
+    margin: 1vh 0;
+}
+
+.form-title{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-top: 3vh;
+}
+
+label{
+    margin-bottom: 1vh;
+}
+
+input{
+    background-color: white;
+    color: black;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    height: 2rem;
+    font-weight: bold;
+    padding: 10px 10px;
+}
+
+input::placeholder{
+    color: grey;
+    font-weight: 500;
+    opacity: 70%;
+}
+
+input:focus{
+    outline: none;
+    border: 2px solid blue;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 255, 0.4);
+}
+
+input:invalid:not(:placeholder-shown){
+    outline: none;
+    border: 2px solid red;
+}
+
+button{
+    background-color: var(--signup-color);
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 40px;
+    margin: 3vh 0;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid var(--signup-color);
+}
+
+.log-in{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: var(--signup-color);
+    font-weight: 700;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+.fa-github {
+    color: white;
+    font-size: 2rem;
+    margin: 0 12px;
+    transition: transform 0.3s;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
